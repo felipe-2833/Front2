@@ -4,6 +4,7 @@ alert("Vamos jogar JOKENPO contra a maquina??\n Para ganhar o jogo é preciso ga
 //declaração de variaveis
 let pontosJogador = 0;
 let pontosMaquina = 0;
+let ferramenta = "";
 
 //função para estabelecer o numero gerado aleatoriamente pela maquina
 let aleatorio = (min, max) => {
@@ -18,14 +19,17 @@ let jokenpo = (valorJogador,valorMaquina) => {
     switch (valorJogador){
         case 1:
         if (valorMaquina === 3){
+            ferramenta = "pedra"
           return true
         }
 
         else if (valorMaquina === 2){
+            ferramenta = "tesoura"
             return false
         }
 
         else if (valorMaquina === 1){
+            ferramenta = "papel"
             return 0
         }
 
@@ -33,24 +37,30 @@ let jokenpo = (valorJogador,valorMaquina) => {
 
         case 2:
         if (valorMaquina === 1){
+            ferramenta = "papel"
             return true
         }
         else if (valorMaquina === 3){
+            ferramenta = "pedra"
             return false
         }
         else if (valorMaquina === 2){
+            ferramenta = "tesoura"
             return 0
         }
         break;
 
         case 3:
         if (valorMaquina === 2){
+            ferramenta = "tesoura"
             return true
         }
         else if (valorMaquina === 1){
+            ferramenta = "papel"
             return false
         }
         else if (valorMaquina === 3){
+            ferramenta = "pedra"
             return 0
         }
         break;
@@ -66,23 +76,23 @@ while(pontosJogador < 2 && pontosMaquina < 2){
 
     if (ganhador === true){
         pontosJogador++
-        alert("Você ganhou esta rodada!Ponto pra você!\n Placar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
+        alert("Você ganhou esta rodada!Ponto pra você!\n Maquina utilizou: " + ferramenta +"\nPlacar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
     }
     else if (ganhador === false){
         pontosMaquina++
-        alert("Você perdeu esta rodada!Ponto da Maquina!\n Placar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
+        alert("Você perdeu esta rodada!Ponto da Maquina!\n Maquina utilizou: " + ferramenta +"\nPlacar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
 
     }
     else if (ganhador === 0){
-        alert("Empate!Ninguem ganha ponto!\n Placar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
+        alert("Empate!Ninguem ganha ponto!\n Maquina utilizou: " + ferramenta +"\nPlacar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
     }
 }
 
 //mensagem para o ganhador 
 if (pontosJogador === 2){
-    alert("PARABENS!!!\n Você ganhou!\n Placar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
+    alert("PARABENS!!!\n Você ganhou!\n Maquina utilizou: " + ferramenta +"\nPlacar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
 }
 
 else if (pontosMaquina === 2){
-    alert("AAAAAAAAAAH, Vitoria da Maquina.\n Você perdeu :(\n Placar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
+    alert("AAAAAAAAAAH, Vitoria da Maquina.\n Você perdeu :(\n Maquina utilizou: " + ferramenta +"\nPlacar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
 }
