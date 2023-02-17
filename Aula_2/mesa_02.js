@@ -90,9 +90,9 @@ while(pontosJogador < 2 && pontosMaquina < 2){
 
 //mensagem para o ganhador 
 if (pontosJogador === 2){
-    alert("PARABENS!!!\n Você ganhou!\n Maquina utilizou: " + ferramenta +"\nPlacar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
+    alert("PARABENS!!!\n Você ganhou!\n Placar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
 }
 
 else if (pontosMaquina === 2){
-    alert("AAAAAAAAAAH, Vitoria da Maquina.\n Você perdeu :(\n Maquina utilizou: " + ferramenta +"\nPlacar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
+    alert("AAAAAAAAAAH, Vitoria da Maquina.\n Você perdeu :(\n Placar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
 }
