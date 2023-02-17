@@ -1,5 +1,5 @@
 //mensagem para iniciar o jogo
-alert("Vamos jogar JOKENPO??\n Para ganhar o jogo é preciso ganhar 2 rodadas.")
+alert("Vamos jogar JOKENPO contra a maquina??\n Para ganhar o jogo é preciso ganhar 2 rodadas.")
 
 //declaração de variaveis
 let pontosJogador = 0;
@@ -66,31 +66,23 @@ while(pontosJogador < 2 && pontosMaquina < 2){
 
     if (ganhador === true){
         pontosJogador++
-        alert("Você ganhou esta rodada!\n Placar: ${pontosJogador}x${pontosMaquina}")
+        alert("Você ganhou esta rodada!Ponto pra você!\n Placar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
     }
     else if (ganhador === false){
         pontosMaquina++
-        alert("Você perdeu esta rodada!\n Placar: ${pontosJogador}x${pontosMaquina}")
+        alert("Você perdeu esta rodada!Ponto da Maquina!\n Placar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
 
     }
     else if (ganhador === 0){
-        alert("Empate!\n Placar: ${pontosJogador}x${pontosMaquina}")
+        alert("Empate!Ninguem ganha ponto!\n Placar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
     }
 }
 
 //mensagem para o ganhador 
 if (pontosJogador === 2){
-    alert("PARABENS!!!\n Você ganhou!")
+    alert("PARABENS!!!\n Você ganhou!\n Placar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
 }
 
 else if (pontosMaquina === 2){
-    alert("AAAAAAAAAAH\n Você perdeu :(")
+    alert("AAAAAAAAAAH, Vitoria da Maquina.\n Você perdeu :(\n Placar: Jogador " + pontosJogador + "x" + pontosMaquina + " Maquina")
 }
-
-
-
-
-
-
-
-
