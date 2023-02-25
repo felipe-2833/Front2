@@ -106,3 +106,4 @@ while(operacao > 4 || operacao < 1 ){
 //resultado
 num = calculo(operacaoConvertida);
 alert(num)
+console.log("Resultado da operação: " + num);
